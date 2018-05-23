@@ -19,12 +19,20 @@
 			font-size: 300%;
 			text-align: center;
 		}
+		body{
+			background: black;
+		
+		}
 	</style>
 
 </head>
 <body class="board">
 	<!-- HTML for the box -->
-	<div class="box">?</div>
+	<div class="box">
+	0
+	</div>
+	 <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
 
 	<!-- BEGIN JAVASCRIPT -->
 	<script>
@@ -37,6 +45,7 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			
 
 			// jQuery stuff setup for you
 			box = $('.box');
@@ -46,37 +55,45 @@
 
 			box.css('left', position);
 			box.text(points);
-			
+				
 				var position;
 				var points;
 				var speed;
 				var direction;
-
-				direction = 1;
-				position = 0;
-				points = 0;
-				speed = 10;
-
+				var positionH;
+				var directionH;
+				
+					position = 0;
+					positionH = 0;
+					points = 0;
+					speed = 10;
+					direction = 1;
+					directionH = 2;
+		
 			// TODO 3 / 4
 			update = function() {
-			position += (speed * direction);
-				box.css('left', position);
-					
-					if(position > boardWidth) {
-    						direction = -1;
-    				}
-					if (position < 0) {
-    						direction = 1;	
-					}
-     
-				};
+			position = position + (speed*direction);
+				positionH = positionH + (speed*directionH);
+				if(position >= (boardWidth - 75) || position < 0) {
+					direction = (direction * -1);
+				}
+				if (positionH > 580 || positionH < 0) {
+					directionH = (directionH * -1);
+				}
+				box.css('left' , position);
+				box.css('top' , positionH);
+				box.text(points);
+			};
+
+				
  			// TODO 5 / 6
 			handleBoxClick = function() {
 			
-					speed = speed + 3;
-					position = 0;
-					points = points + 1;
-
+				points = points + 1;
+				speed = speed + 3;
+				//Teleports the box to a random vertical and horizantal position upon every click
+				position = (Math.random() * 1200);
+				positionH = (Math.random() * 579);
 				};			
 				
 		

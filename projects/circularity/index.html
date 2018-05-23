@@ -22,6 +22,9 @@
         <script src="js/opspark.js"></script>
         
         <style type="text/css">
+        body{
+            background: black;
+        }
             /*override default styles here*/
         </style>
     </head>
@@ -57,7 +60,7 @@
                  * Using the count variable we can keep track of how many times we have run the loop.
                  * Here we want to run our loop 100 times to create 100 circles.
                  */
-                for (var count = 1; count <= 100; count++) {
+                    for ( i = 0; i <= 1000; i++) {
                     // TODO 3 : YOUR CODE STARTS HERE //////////////////////////
                      circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
 					
@@ -72,11 +75,13 @@
                     
                     
                         }
+                        
+                        
                 
-                view.addChild(fps);
-                app.addUpdateable(fps);
+                    view.addChild(fps);
+                    app.addUpdateable(fps);
 
-                function update() {
+                    function update() {
                     /* 
                      * For-loops also provide a convenient way to access elements of an Array one at a time.
                      * We can use the variable i (short for index) as a placeholder for the numbered index we want to access
@@ -84,32 +89,41 @@
                      */
                     for (var i = 0; i < circles.length; i++) {
                         // TODO 4 : Access one circle at time from the circles Array //
-                        circle = 1
+                        circle = circles[i];
                         
                         // TODO 5 : Update the circles position //
                         physikz.updatePosition(circle);
                         
-                        // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-                        
-                        if ( circle.x > canvas.width + circle.radius ) {
+                        // TODO 6 : YOUR CODE STARTS HERE ////////////////////
+                        /**
+                         * Good start Taeus. After you determine that the circle has 
+                         * left the screen you can move it to the other side by 
+                         * changing the circle's .x or .y property.
+                         * */
+                        if ( circle.x < 0 - circle.radius ) {
+                            
                             // your code to place circle exactly off the stage at the left-side //
                             
-                        } else if (circle.x > canvas.width + circle.radiu ) {
+                        } else if (circle.x > canvas.width + circle.radius ) {
+                           
                             // your code to place circle exactly off the stage at the right-side //
                             
                         }
                         
-                        if ( circle.x > canvas.width + circle.radiu ) {
+                        /** 
+                         * Be careful here: you have your comparison operators mixed up
+                         * */
+                        if (circle.y < 0 - circle.radius ) {
                             // code to place circle exactly off the stage at the bottom //
-                            
-                        } else if ( circle.x > canvas.width + circle.radiu ) {
+                        
+                        } else if ( circle.y >  canvas.height + circle.radius   ) {
                             // your code to place circle exactly off the stage at the top //
-                            
+                            physikz.updatePosition(circle);
                         }
                         
                         // YOUR TODO 6 CODE ENDS HERE //////////////////////////
-                    }
-                }
+                        }
+                        }
                 
             ////////////////////////////////////////////////////////////////////
             // NO CODE BELOW HERE                                             //
