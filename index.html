@@ -1,35 +1,39 @@
 <!DOCTYPE HTML>
-<html>
-<head>
-<title>The Lone 'Tone</title>
-     <style>
-            body {
-                background: "https://taeuswright-github-io-taeuswright.c9users.io/projects/circularity/index.html";/*rgb(150, 19, 20);*/
-                color: rgb(160,12 ,21);
-                padding: 10px;
-                font-family: comic;
-            }
-            header {
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-            [id=all-contents] {
-                max-width: 800px;
-                margin: auto;
-            }
+    <html>
+        <head>
+            <title>Taeus Wright's Website</title>
+             <style>
+                body {
+                 
+                    background: rgb(0, 19, 20);
+                    color: rgb(16,12 ,21);
+                    padding: 10px;
+                    font-family: "Lucida Console", monospace;
+                }
+                header {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                [ id=all-contents]  {
+                    max-width: 800px;
+                    margin: auto;
+                }
     
-            /* navigation menu */
-            /*red one */
-            nav {
-                background: rgb(280, 12, 210);
+                /* navigation menu */
+                /*purple bar */
+                 nav {
+                background: rgb(102, 5, 123);
                 margin: 0 auto;
+                margin-bottom: 20px;
                 display: flex;
-                padding: 10px;
+                padding: 20px;
+                border: 1px;
+                border-radius: 40px;
             }
             nav header {
                 display: flex;
                 align-items: center;
-                color: rgb(10, 200, 210);
+                color: white;
                 flex: 1;
             }
             nav ul {
@@ -37,90 +41,165 @@
             }
             nav li {
                 display: inline-block;
-                padding: 0 10px;
+                padding:  5px;
             }
             nav a {
                 text-decoration: none;
-                color: #ffffff0;
+                color: white;
             }
     
-            /* main container area beneath menu */
-            main {
-                background: rgb(245, 238, 219);
+    
+                /* main container area beneath menu */
+                    [class = main1] {
+                background: rgb(180, 0, 1);
+                display: flex ;
+                border: 20px;
+                border-radius: 25px;
+            }
+            [class = main2] {
+                background: rgb(5, 9, 5);
+                border: 1px;
+                border-radius: 25px;
                 display: flex;
+                visibility: hidden;
             }
-            [class=sidebar] {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            [class=sidebar] img {
-                width: 200px;
-            }
-            [class=content] {
+            [class = professional-content] {
+                color: white;
                 flex: 1;
                 padding: 15px;
             }
-            [class=interests] header {
-                font-size: 1.25em;
+            [class = professional-hobbies] header {
+                font-size: 1.1em;
+                text-decoration: underline;
             }
-        </style>
-
-</head>
-<body>
-<div id = "all contents"> 
-<nav> 
-    <header> The Lone 'Tone</header>
-    <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    </ul>
+            [class = professional-hobbies] ul {
+                list-style-type: none;
+                line-height: 30%;
+            }
+            [class = professional-hobbies] ul {
+                display: flex;
+                padding: 10px;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 30px;
+            }
+            [class=sidebar] img {
+                width: 200px;
+                border: 4px;
+                border-radius: 25px;
+                margin: auto;
+                vertical-align: central;
+            }
+            [class=content] {
+                flex: 1;
+                padding: 25px;
+                color: white;
+            }
+            [class=hobbies] header {
+                font-size: 20px;
+                
+            }
+            [class = hobbies] ul {
+                line-height: 100%;
+            }
+            [class = gamer] {
+                display: none;
+                font-family: "Lucida Console" , monospace;
+            }
+            [class = ceo] {
+                padding-right: -30px;
+            }
+                
+            </style>    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script>
             
-</nav>
+            var clickCounter = 0;
+            
+            $(document).ready(function(){
+                $('button').click(function(){
+                    clickCounter = (clickCounter + 1);
+                    if (clickCounter % 2 != 0) {
+                        $('main.main2').css('visibility', 'visible');
+                        $('main.main1').toggle();
+                        $('body').css('background', 'rgb(210, 213, 216)');
+                        $('button.ceo').toggle();
+                        $('button.gamer').toggle();
+                        $('nav').css('background', 'rgb(119, 136, 153)')
+                    } else if (clickCounter % 2 === 0) {
+                        $('main.main2').css('visibility', 'hidden');
+                        $('main.main1').toggle();
+                        $('body').css('background', 'rgb(217, 255, 240)');
+                        $('button.ceo').toggle();
+                        $('button.gamer').toggle();
+                        $('nav').css('background', 'rgb(66, 154, 223)');
+                    }
+                    
+                });
+            });
+            </script>
+            
+        </head>
+            <body>
+                <div id = "all contents"> 
+            <nav> 
+                <header>Taeus Wright's Website</header>
+                <ul>
+                     <li><button class = 'gamer'>Gamer</button></li>
+                     <li><button class = 'ceo'>CEO</button></li>
+                    <li><a href="index.html">About Me </a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            
+            </nav>
 
-<main>
-<div class="sidebar">
+                <main class= "main1">
+                    <div class="sidebar">
   
-        <img src=" http://az58332.vo.msecnd.net/e88dd2e9fff747f090c792316c22131c/Images/Products29464-1200x1200-373275.jpg">
-   </div>
+                        <img src="https://lh3.googleusercontent.com/YpZmPhN7IN81IiMdRm049Gc3o8FQjx6Be_OErv8GNed2vXQmUBZP83eTYeNfRM3MWPZxSOwgTsCtYwt21fM9kdv4JIvGDe_9UcWmXzsVI081UVCP1wvtQ5ryQ6EA1lXlDIWC33uK=w2400">
 
-<div class="content">
-    <header> Taeseus
-     <section> </section>
-     <p> Student of ULL</p>
-     <p> Graduate of NHS</p>
-    </header>
+                    </div>
+
+                    <div class="content">
+                        <header> Taeseus
+                            <section> </section>
+                             <p> CMPS Major at UL Lafayette</p>
+                             <p> Graduate of NHS c/o 2018</p>
+                        </header>
  
-   <h1>Taeus J. Wright 
-  
-  </h1>   
-   <p>Former Bus Captain Room Captain General
-   </p>
-   <section class=" Hobbies">
-       <header> Hobbies</header>
-       <ul>
-        <li> Playing Euphtoneaphonium</li>   
-           <li> Video Games</li>
-       <li> Eating</li>
-       </ul>
-       </div class>
-       
-   </div>        
-   </section>
-</main>
-<main class="container2">
-  <div class="professional-content">
-  <header>Professional Interests</header>
-        <section class="interests">
-            <button>Use me to see my professional interests</button>
-            <ul class="professional-interests">
-                <li>Playing Games</li>
-                <li>Eating</li>
-                <li>Writing music</li>
-            </ul>
-        </section>
-  </div>
-</main>
-</div>    
-</body>
+                          
+                         <p>Former Bus Captain Room Captain General</p>
+                          <section class="hobbies">
+                                
+                                <header> Hobbies</header>
+                               <ul>
+                                    <li>Playing music</li>   
+                                   <li>playing Video Games</li>
+                                   <li>Drawing</li>
+                                </ul>
+                            </section>
+                        </div>  
+                    </main>
+                
+                <main class = 'main2'>
+                 <div class = 'sidebar'>
+                     <img src = 'https://lh3.googleusercontent.com/Q5c_MWxOaKXA8YJQOPXnIE4k4D0P4kZjcu1VuO76UNrRf3UFi5N9tF_-m5F6yrGM5XZjA6iaB566Jungdb9a5-U3_J8A0vRJ4Ng52govOIM3eSP3usy3cSiUSlv3wgZntJVaq3HcQw=w2400'>
+                 </div>
+                 <div class = 'professional-content'>
+                    <header>Taeus Wright</header>
+                    <p>Game Designer</p>
+                    <p>Web Designer</p>
+                    <section class = 'professional-hobbies'>
+                        <header>Professional Hobbies:</header>
+                            <ul>Writing Music</ul>
+                            <ul>UI Building</ul>
+                            <ul>Writing Stories</ul>
+                    </section>
+                 </div>
+             </main>
+             
+         </div>
+            </body>
 
-</html>
+    </html>
