@@ -12,17 +12,17 @@
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var animal = {};
-animal.species ='red panda';
-animal['name'] = 'Fluffle';
+animal.species = "red panda";
+animal["name"] = "Fluffle";
 animal.noises = [];
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var noises = [];
-noises.push('woof');
-noises.push('grrrr');
-noises.unshift('grrrrrrrrrrrr');
-noises.push('idk panda sounds');
+noises.push("woof");
+noises.push("grrrr");
+noises.unshift("grrrrrrrrrrrr");
+noises.push("idk panda sounds");
 console.log(noises.length);
 console.log(noises.length - 1);
 console.log(noises);
@@ -30,8 +30,8 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-animal['noises'] = noises;
-animal.noises.push('skadoosh');
+animal["noises"] = noises;
+animal.noises.push("skadoosh");
 console.log(animals);
 /* *******************************************************************
  * Step 4 - Review
@@ -58,9 +58,21 @@ console.log(animals);
 var animals = [];
 animals.push(animal);
 console.log(animals);
-var duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] };
-var axolotl = { species: 'axolotl', name: 'Gary', noises: ['blub', 'blorb', 'boop', 'swish'] };
-var moocow =  { species: 'moocow', name: 'Harold', noises: ['bark', 'moo', 'sneeze', 'plop'] };
+var duck = {
+  species: "duck",
+  name: "Jerome",
+  noises: ["quack", "honk", "sneeze", "woosh"]
+};
+var axolotl = {
+  species: "axolotl",
+  name: "Gary",
+  noises: ["blub", "blorb", "boop", "swish"]
+};
+var moocow = {
+  species: "moocow",
+  name: "Harold",
+  noises: ["bark", "moo", "sneeze", "plop"]
+};
 // var lizardbro =  { species: 'lizardbro', name: 'Dudebro', noises: ['hiss', 'moo', 'slither', 'rshhhh'] };
 
 animals.push(duck);
@@ -88,17 +100,17 @@ duck.friends = friends;
  * move onto Part 2 in the file called "functions.js"
  */
 
-
-
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var animal, noises, animals, friends, getRandom;
-if((typeof process !== 'undefined') &&
-   (typeof process.versions.node !== 'undefined')) {
-     module.exports.animal = animal || null;
-     module.exports.noises = noises || null;
-     module.exports.animals = animals || null;
-     module.exports.friends = friends || null;
-     module.exports.getRandom = getRandom || null;
+if (
+  typeof process !== "undefined" &&
+  typeof process.versions.node !== "undefined"
+) {
+  module.exports.animal = animal || null;
+  module.exports.noises = noises || null;
+  module.exports.animals = animals || null;
+  module.exports.friends = friends || null;
+  module.exports.getRandom = getRandom || null;
 }

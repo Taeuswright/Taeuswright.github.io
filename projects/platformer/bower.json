@@ -1,20 +1,12 @@
 {
   "name": "platformer",
-  "authors": [
-    "John Fraboni <johnfraboni@hotmail.com>"
-  ],
+  "authors": ["John Fraboni <johnfraboni@hotmail.com>"],
   "description": "",
   "main": "index.html",
   "moduleType": [],
   "license": "MIT",
   "homepage": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "jquery": "^2.2.1"
   }

@@ -2,25 +2,12 @@
   "name": "motion-poem",
   "version": "1.0.0",
   "homepage": "https://github.com/OperationSpark/motion-poem",
-  "authors": [
-    "jfraboni <john@operationspark.org>"
-  ],
+  "authors": ["jfraboni <john@operationspark.org>"],
   "description": "A template project for programmer art built using CreateJS",
   "main": "index.html",
-  "keywords": [
-    "Operation",
-    "Spark",
-    "motion",
-    "poem"
-  ],
+  "keywords": ["Operation", "Spark", "motion", "poem"],
   "license": "CC",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
   "dependencies": {
     "lodash": "3.0.0",
     "easeljs": "0.8.2",
