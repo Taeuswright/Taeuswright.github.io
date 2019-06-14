@@ -1,0 +1,164 @@
+{
+  "repos": [
+    {
+      "name": "aion-alert-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-backoffice-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-employee-ui",
+      "isAlive": false,
+      "usesMUI": false,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-identity-server",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-links-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-nginx",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": false,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-qualification-ui",
+      "isAlive": false,
+      "usesMUI": false,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-regionmetric-ui",
+      "isAlive": false,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-registration-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-reporting-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-smart-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-spa-server",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": false,
+      "hasBranding": false
+    },
+    {
+      "name": "aion-subscriber-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-ui-common",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": false,
+      "hasBranding": false
+    },
+    {
+      "name": "aion-user-router",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": false,
+      "hasBranding": true
+    },
+    {
+      "name": "aion-user-ui",
+      "isAlive": true,
+      "usesMUI": true,
+      "usesSpaServer": true,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "CBT",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": false,
+      "hasBranding": true
+    },
+    {
+      "name": "InstructorPortal",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "SSQv4",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    },
+    {
+      "name": "SSQv5",
+      "isAlive": true,
+      "usesMUI": false,
+      "usesSpaServer": false,
+      "usesAionUICommon": true,
+      "hasBranding": true
+    }
+  ]
+}
