@@ -2,7 +2,7 @@
   window.opspark = window.opspark || {};
 
   var _ = window._,
-    physikz = window.opspark.racket.physikz,
+    physics = window.opspark.racket.physics,
     draw = window.opspark.draw,
     createjs = window.createjs;
 
@@ -62,23 +62,23 @@
         hitzones.y = halle.y;
         var hitHead = _.extend(
           draw.circle(25, "rgba(0, 0, 0, .3"),
-          physikz.makeBody("hitzone")
+          physics.makeBody("hitzone")
         );
         hitHead.y = hitHead.radius;
         var hitFace = _.extend(
           draw.circle(20, "rgba(0, 0, 0, .3"),
-          physikz.makeBody("hitzone")
+          physics.makeBody("hitzone")
         );
         hitFace.y = hitHead.radius * 2;
 
         // var hitzone40 = new createjs.Bitmap(window.opspark.hitzone40);
         // hitzone40.regX = hitzone40.image.width / 2;
         // hitzone40.regY = hitzone40.image.height / 2;
-        // var hitBody = _.extend(hitzone40, physikz.makeBody('hitzone'));
+        // var hitBody = _.extend(hitzone40, physics.makeBody('hitzone'));
 
         var hitBody = _.extend(
           draw.circle(20, "rgba(0, 0, 0, .3"),
-          physikz.makeBody("hitzone")
+          physics.makeBody("hitzone")
         );
         hitBody.radius = 20;
         hitHead.handleCollision = hitFace.handleCollision = hitBody.handleCollision = handleCollision;

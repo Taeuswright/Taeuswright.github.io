@@ -23,21 +23,24 @@
 
     <style type="text/css">
       body {
-        background: black;
+        background: #4b0082;
       }
+
       /*override default styles here*/
     </style>
   </head>
+
   <body>
     <div>
       <canvas id="canvas" width="500" height="500"></canvas>
     </div>
+
     <script id="motion-poem">
       (function() {
         "use strict";
 
         var draw = window.opspark.draw,
-          physikz = window.opspark.racket.physikz,
+          physics = window.opspark.racket.physics,
           app = window.opspark.makeApp({ update: update }),
           canvas = app.canvas,
           view = app.view,
@@ -66,7 +69,7 @@
             draw.blurFilterOn(circle);
           }
 
-          physikz.addRandomVelocity(circle, canvas);
+          physics.addRandomVelocity(circle, canvas);
           circles.push(circle);
           view.addChild(circle);
         }
@@ -85,7 +88,7 @@
             circle = circles[i];
 
             // TODO 5 : Update the circles position //
-            physikz.updatePosition(circle);
+            physics.updatePosition(circle);
 
             // TODO 6 : YOUR CODE STARTS HERE ////////////////////
             /**
@@ -106,7 +109,7 @@
               // code to place circle exactly off the stage at the bottom //
             } else if (circle.y > canvas.height + circle.radius) {
               // your code to place circle exactly off the stage at the top //
-              physikz.updatePosition(circle);
+              physics.updatePosition(circle);
             }
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
