@@ -3,7 +3,7 @@
 
   window.opspark = window.opspark || {};
 
-  var physics = window.opspark.racket.physics;
+  var physikz = window.opspark.racket.physikz;
 
   var KEYCODE_SPACE = 32,
     KEYCODE_UP = 38,
@@ -121,11 +121,11 @@
   function hitTest(body) {
     _player.hitzones().forEach(function(hitzone) {
       var hitzonePoint = hitzone.localToGlobal(0, 0);
-      var distanceProperties = physics.getDistanceProperties(
+      var distanceProperties = physikz.getDistanceProperties(
         hitzonePoint,
         body
       );
-      var hitResult = physics.hitTestRadial(
+      var hitResult = physikz.hitTestRadial(
         distanceProperties.distance,
         hitzone,
         body
@@ -134,7 +134,7 @@
         handleCollision(
           distanceProperties,
           hitResult,
-          physics.getImpactProperties(hitzone, body)
+          physikz.getImpactProperties(hitzone, body)
         );
       }
     });

@@ -1,7 +1,7 @@
 (function (window) {
     window.opspark = window.opspark || {};
 
-    var physics = window.opspark.racket.physics;
+    var physikz = window.opspark.racket.physikz;
     var draw = window.opspark.draw;
     var createjs = window.createjs;
 
@@ -93,7 +93,7 @@
            See documentation on these methods
          */
         function createGameItem(type,radius) {
-            var body = _.extend(new createjs.Container(),physics.makeBody(type));
+            var body = _.extend(new createjs.Container(),physikz.makeBody(type));
             body.radius = radius;
 
             body.handleCollision =  function (impact, otherBody) {

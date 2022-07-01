@@ -1,7 +1,7 @@
-(function (window) {
+(function(window) {
   window.opspark = window.opspark || {};
 
-  window.opspark.makeApp = function (updateable) {
+  window.opspark.makeApp = function(updateable) {
     var _stage, _canvas, _updateable, _app;
 
     _stage = new createjs.Stage(canvas);
@@ -13,12 +13,12 @@
       stage: _stage,
       view: new createjs.Container(),
 
-      addUpdateable: function (updateable) {
+      addUpdateable: function(updateable) {
         _updateable.push(updateable);
         return _app;
       },
 
-      removeUpdateable: function (updateable) {
+      removeUpdateable: function(updateable) {
         var index = _updateable.indexOf(updateable);
         if (index !== -1) {
           _updateable.splice(index, 1);
@@ -26,7 +26,7 @@
         return _app;
       },
 
-      update: function (e) {
+      update: function(e) {
         for (var i = 0; i < _updateable.length; i++) {
           _updateable[i].update();
         }

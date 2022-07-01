@@ -7,7 +7,7 @@
     Proton = window.Proton,
     draw = window.opspark.draw,
     num = window.opspark.racket.num,
-    physics = window.opspark.racket.physics;
+    physikz = window.opspark.racket.physikz;
 
   window.opspark.makeOrbManager = function(app, particleManager) {
     var space = app.space,
@@ -64,7 +64,7 @@
         2,
         draw.randomRadialProps(null, 25, 25)
       );
-      orb = _.extend(orb, physics.makeBody("orb"));
+      orb = _.extend(orb, physikz.makeBody("orb"));
       decommission(orb);
       //hud.updateOf(orb.radius);
 

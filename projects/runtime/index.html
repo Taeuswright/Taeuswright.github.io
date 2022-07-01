@@ -57,7 +57,7 @@
 
         var opspark = window.opspark,
           draw = opspark.draw,
-          physics = opspark.racket.physics,
+          physikz = opspark.racket.physikz,
           world = opspark.world,
           data = "assets/spritesheet/halle/data-v9.json",
           app = opspark.makeApp(world.makeRules()),
@@ -123,10 +123,10 @@
 
         function update() {
           space.forEach(function(body) {
-            physics.updatePosition(body);
-            physics.updateSpace(
+            physikz.updatePosition(body);
+            physikz.updateSpace(
               space,
-              physics.hitTestRadial,
+              physikz.hitTestRadial,
               rules.handleCollision
             );
             playerManager.hitTest(body);

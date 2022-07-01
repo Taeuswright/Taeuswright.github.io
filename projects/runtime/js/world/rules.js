@@ -2,7 +2,7 @@
     window.opspark = window.opspark || {};
     var world = window.opspark.world = window.opspark.world || {};
     
-    var physics = window.opspark.racket.physics;
+    var physikz = window.opspark.racket.physikz;
     
     var _spring;
     

@@ -6,7 +6,7 @@
   var _ = window._,
     createjs = window.createjs,
     draw = window.opspark.draw,
-    physics = window.opspark.racket.physics;
+    physikz = window.opspark.racket.physikz;
 
   window.opspark.makeProjectileManager = function(
     view,
@@ -20,7 +20,7 @@
     function makeProjectile() {
       var projectile = _.extend(
         draw.circle(5, "#FE1EFE"),
-        physics.makeBody("projectile")
+        physikz.makeBody("projectile")
       );
 
       // TODO : get from settings JSON //
@@ -71,8 +71,8 @@
         //console.log(projectile.rotation);
 
         degrees = emitter.rotation;
-        projectile.velocityX = 10; //Math.cos(physics.degreesToRadians(degrees)) * (projectile.velocityMax + emitter.velocityX || 0);
-        projectile.velocityY = 0; //Math.sin(physics.degreesToRadians(degrees)) * (projectile.velocityMax + emitter.velocityY || 0);
+        projectile.velocityX = 10; //Math.cos(physikz.degreesToRadians(degrees)) * (projectile.velocityMax + emitter.velocityX || 0);
+        projectile.velocityY = 0; //Math.sin(physikz.degreesToRadians(degrees)) * (projectile.velocityMax + emitter.velocityY || 0);
         projectile.rotationalVelocity = 0;
 
         //console.log(projectile.velocityX);
